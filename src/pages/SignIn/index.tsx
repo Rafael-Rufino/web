@@ -1,3 +1,5 @@
+/* eslint-disable import/first */
+
 import React from 'react';
 import { createComponent } from '@lit-labs/react';
 
@@ -11,6 +13,8 @@ const ButtonApp = createComponent(React, 'button-app', Button);
 const LinkIconApp = createComponent(React, 'linkicon-app', LinkIcon);
 const CkeckTextApp= createComponent(React, 'checktext-app', CheckText);
 
+import lockImg from '../../assets/lock.svg';
+
 export const SignIn = () => {
   return (
     <Container>
@@ -20,7 +24,7 @@ export const SignIn = () => {
         <InputApp label='Sua senha' placeholder="Digite a sua senha"  type='password' onChange={() => {}} />
         <CkeckTextApp name='Manter conectado' />
         <ButtonApp type='submit' name='Acessar sua conta' onClick={()=>{}}/>
-        <LinkIconApp  src="../../assets/lock.png" title="Você deseja redefinir a senha ?" href="https://www.gazin.com.br"  name='Esqueceu sua senha?'/>
+            <LinkIconApp  src={lockImg} title="Você deseja redefinir a senha ?" href="https://www.gazin.com.br"  name='Esqueceu sua senha?'/>
         </Wrapper>
     </Container>
   )
